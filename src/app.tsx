@@ -91,7 +91,7 @@ export default class App extends Component {
     }
   }
 
-  render() {
+  template() {
     return (
       <div class="gea-app">
         {/* Top Header */}
@@ -313,7 +313,4 @@ export default class App extends Component {
     )
   }
 
-  template() {
-    return this.render()
-  }
 }
