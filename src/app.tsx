@@ -236,7 +236,7 @@ export default class App extends Component {
 
                 {/* Right Side: Drawing Box */}
                 <section class="drawing-panel card">
-                  {raffleStore.isDrawing ? (
+                  {raffleStore.isDrawing && (
                     /* Active drawing state */
                     <div class="drawing-display animate-pulse-glow">
                       <div class="spinning-ring-container">
@@ -250,7 +250,9 @@ export default class App extends Component {
                       </div>
                       <p class="drawing-status">Kazananlar Seçiliyor...</p>
                     </div>
-                  ) : raffleStore.winners.length > 0 ? (
+                  )}
+
+                  {!raffleStore.isDrawing && raffleStore.winners.length > 0 && (
                     /* Results state */
                     <RaffleResults 
                       title={raffleStore.title}
@@ -258,7 +260,9 @@ export default class App extends Component {
                       substitutes={raffleStore.substitutes}
                       onReset={() => raffleStore.resetDraw()}
                     />
-                  ) : (
+                  )}
+
+                  {!raffleStore.isDrawing && raffleStore.winners.length === 0 && (
                     /* Empty/Default state ready to draw */
                     <div class="drawing-idle">
                       <div class="idle-illustration">✨</div>

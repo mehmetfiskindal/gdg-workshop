@@ -54,7 +54,6 @@ const DEFAULT_PARTICIPANTS = [
   "Mehmet MU***",
   "nazan şA***",
   "Yusuf DE***",
-  "Yasir KA***",
   "Faris ZA***",
   "Muhammed ÖZ***",
   "Sever ŞA***",
